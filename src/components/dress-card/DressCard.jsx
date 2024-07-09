@@ -35,7 +35,7 @@
 //   )
 // }
 
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import styles from './DressCard.module.css';
 
 const DressCard = ({ imgOne, imgTwo, imgThree, imgFour, tagOne, title, tagTwo, imgFive, imgSix, imgSeven, imgEight, tagThree }) => {
