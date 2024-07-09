@@ -1,0 +1,80 @@
+.dress_wrp {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 0px 115px 32px;
+}
+
+.dress_content h1 {
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: rgba(26, 26, 26, 1);
+    margin-bottom: 24px;
+}
+
+.dress_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 20px;
+    row-gap: 67px;
+
+}
+
+.homepage {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 36px 0px;
+}
+
+.selector {
+    display: flex;
+    margin-top: 75px;
+    gap: 16px;
+}
+
+.selector ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.selector li {
+    color:  #1A1A1A;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-bottom: solid 3px white;
+    width: 39px;
+}
+
+.selector b {
+    color:  #1A1A1A;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-bottom: solid 3px #6B3E1A;
+    width: 39px;
+}
+
+.selector li:hover {
+    border-bottom: solid 3px white;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(12, 49, 48, 1);
+    width: 39px;
+}

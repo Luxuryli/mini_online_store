@@ -1,0 +1,138 @@
+.suggest {
+    display: flex;
+    flex-direction: column;
+    max-width: 75vw;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.you {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.you h4 {
+    color:  #1A1A1A;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.colors {
+    display: flex;
+    gap: 8px;
+}
+
+.card_img {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.card_img1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.card_img2 {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.image1, .image2, .image3 {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 16px;
+} 
+
+.card_img h5, .card_img1 h5, .card_img2 h5 {
+    display: flex;
+    margin: 0px 0px;
+    color: #1A1A1A;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card_img2 h5 {
+    display: flex;
+    margin-top: 8px;
+    color: #1A1A1A;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card_img h1, .card_img1 h1, .card_img2 h1 {
+    color: #1A1A1A;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 8px;
+}
+
+.card_img p, .card_img1 p, .card_img2 p {
+    margin-bottom: 8px;
+    color:  #545454;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.love {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    justify-self: center;
+    padding: 10px;
+    z-index: 100;
+}
+
+.card1 {
+    width: 424px;
+    height: 347px;
+    position: relative;
+    display: inline-block;
+}
+    
+.card1 .img_top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+    
+.card1:hover .img_top {
+    display: inline;
+} 

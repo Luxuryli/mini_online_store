@@ -1,0 +1,110 @@
+.mother {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.dress_card1 h3 {
+    color:  #1A1A1A;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+
+.dress_card1 p {
+    color: #545454;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.dress_card1 h4 {
+    color: #502F14;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 16px;
+}
+
+.dress_card3 p {
+    color: #1A1A1A;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.dress_card0 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.dress_card2 {
+    margin: 8px 0px;
+    display: flex;
+    gap: 8px;
+}
+
+.lovehov {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+
+.loveact {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    justify-self: center;
+    z-index: 100;
+    margin: -10px;
+}
+
+.over {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    justify-self: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+.over1 {
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    justify-self: center;
+    padding: 20px;
+    z-index: 99;
+}
+
+.hov {
+    width: 346px;
+    height: 347px;
+    position: relative;
+    display: inline-block;
+}
+
+.hov .img_top1 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.hov:hover .img_top1 {
+    display: inline;
+}

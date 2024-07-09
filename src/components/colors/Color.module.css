@@ -1,0 +1,195 @@
+.color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.color1 {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.colors {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.grey, .ocean, .violet, .purple, .green, .blue, .red, .yellow, .lemon, .brown,.army, .ash {
+    width: 20px;
+    height: 20px;
+}
+
+
+.grey[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none;
+    border-radius: 100px;
+    background-color: rgba(217, 217, 217, 1);
+}
+.ocean[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none;
+    border-radius: 100px;
+    background-color: rgba(12, 229, 221, 1);
+}
+.violet[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none;
+    border-radius: 100px;
+    background-color: rgba(229, 12, 194, 1);
+}
+.purple[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none ;
+    border-radius: 100px;
+    background-color: rgba(146, 12, 229, 1);
+}
+.green[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none ;
+    border-radius: 100px;
+    background-color: rgba(42, 229, 12, 1);
+}
+.blue[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none ;
+    border-radius: 100px;
+    background-color: rgba(12, 47, 229, 1);
+}
+.red[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none ;
+    border-radius: 100px;
+    background-color: rgba(229, 12, 12, 1);
+}
+.yellow[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none ;
+    border-radius: 100px;
+    background-color: rgba(229, 181, 12, 1);
+}
+.lemon[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none ;
+    border-radius: 100px;
+    background-color: rgba(133, 229, 12, 1);
+}
+.brown[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none ;
+    border-radius: 100px;
+    background-color: rgba(146, 115, 6, 1);
+}
+.army[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none ;
+    border-radius: 100px;
+    background-color: rgba(16, 65, 63, 1);
+}
+.ash[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none ;
+    border-radius: 100px;
+    background-color: rgba(53, 65, 69, 1);
+}
+
+.color input[type="checkbox"]::before {
+    content: '';
+    width: 19px;
+    height: 20px;
+    clip-path: polygon(17% 54%, 28% 43%, 38% 54%, 70% 22%, 81% 33%, 38% 75%, 17% 54%);
+    transform: scale(0);
+    display: flex;
+
+}
+
+.grey,
+.ocean,
+.violet,
+.purple,
+.green,
+.blue,
+.red,
+.yellow,
+.lemon,
+.brown,
+.army,
+.ash, input[type="checkbox"]:checked::before {
+    transform: scale(1);
+    background-color: rgba(26, 26, 26, 1);
+
+}
+
+.grey,
+.ocean,
+.violet,
+.purple,
+.green,
+.blue,
+.red,
+.yellow,
+.lemon,
+.brown,
+.army,
+.ash,[type="checkbox"]:checked {
+    transform: scale(1);
+    background-color: normal;
+}
