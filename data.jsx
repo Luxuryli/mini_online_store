@@ -32,7 +32,7 @@ import Yellow from './src/assets/Yellow.svg'
 import Lemon from './src/assets/Lemon.svg' 
 import Brown from './src/assets/Brown.svg' 
 import ArmyGreen from './src/assets/Army.svg' 
-import Love from './src/assets/src/assets/Lovefave.svg'
+import Love from './src/assets/src/assets/LoveFaveactive.svg'
 import LoveFill from './src/assets/src/assets/LoveFaveactive.svg'
 
 
