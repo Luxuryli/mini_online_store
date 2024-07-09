@@ -1,44 +1,8 @@
 /* eslint-disable react/prop-types */
-// import styles from './DressCard.module.css'
-// import { useState } from 'react';
-
-// const DressCard = ({ imgOne, imgTwo, imgThree, imgFour, tagOne, title, tagTwo, imgFive, imgSix, imgSeven, imgEight, tagThree}) => {
-//   return (
-//     <div className={styles.mother}>
-//         <div className={styles.dress_card0}>
-//             <div className={styles.lovehov}>
-//                 <div className={styles.hov}>
-//                     <img src={imgOne} alt={title} />
-//                     <img src={imgTwo} alt={title} className={styles.img_top1}/>
-//                 </div>
-//                 <div className={styles.loveact}>
-//                     <img src={imgThree} alt={title} className={styles.over} />
-//                     <img src={imgFour} alt={title} className={styles.over1}/>
-//                 </div>
-//             </div>
-//         </div>
-//         <div className={styles.dress_card1}>
-//             <h4>{tagOne}</h4>
-//             <h3>{title}</h3>
-//             <p>{tagTwo}</p>
-//         </div>
-//         <div className={styles.dress_card2}>
-//             <img src={imgFive} alt={title} />
-//             <img src={imgSix} alt={title} />
-//             <img src={imgSeven} alt={title} />
-//             <img src={imgEight} alt={title} />
-//         </div>
-//         <div className={styles.dress_card3}>
-//             <p>{tagThree}</p>
-//         </div>
-//     </div>
-//   )
-// }
-
-import  { useState } from 'react';
+import { useState } from 'react';
 import styles from './DressCard.module.css';
 
-const DressCard = ({ imgOne, imgTwo, imgThree, imgFour, tagOne, title, tagTwo, imgFive, imgSix, imgSeven, imgEight, tagThree }) => {
+const DressCard = ({ imgOne, imgTwo, imgThree, imgNine, imgTen, imgFour, tagOne, title, tagTwo, imgFive, imgSix, imgSeven, imgEight, tagThree }) => {
   const [clickedImages, setClickedImages] = useState({
     imgFive: false,
     imgSix: false,
@@ -46,11 +10,22 @@ const DressCard = ({ imgOne, imgTwo, imgThree, imgFour, tagOne, title, tagTwo, i
     imgEight: false,
   });
 
+  const [showImgTen, setShowImgTen] = useState(false);
+  const [showImgFour, setShowImgFour] = useState(false);
+
   const handleImageClick = (image) => {
     setClickedImages((prevState) => ({
       ...prevState,
       [image]: !prevState[image],
     }));
+  };
+
+  const handleToggleImgTen = () => {
+    setShowImgTen((prevShowImgTen) => !prevShowImgTen);
+  };
+
+  const handleToggleImgFour = () => {
+    setShowImgFour((prevShowImgFour) => !prevShowImgFour);
   };
 
   return (
@@ -62,8 +37,40 @@ const DressCard = ({ imgOne, imgTwo, imgThree, imgFour, tagOne, title, tagTwo, i
             <img src={imgTwo} alt={title} className={styles.img_top1} />
           </div>
           <div className={styles.loveact}>
-            <img src={imgThree} alt={title} className={styles.over} />
-            <img src={imgFour} alt={title} className={styles.over1} />
+            <div className={styles.carthet}>
+              {showImgTen ? (
+                <img 
+                  src={imgTen} 
+                  alt={title} 
+                  className={styles.over} 
+                  onClick={handleToggleImgTen}
+                />
+              ) : (
+                <img 
+                  src={imgNine} 
+                  alt={title} 
+                  className={styles.over} 
+                  onClick={handleToggleImgTen}
+                />
+              )}
+            </div>
+            <div className={styles.carthet}>
+              {showImgFour ? (
+                <img 
+                  src={imgFour} 
+                  alt={title} 
+                  className={styles.over} 
+                  onClick={handleToggleImgFour}
+                />
+              ) : (
+                <img 
+                  src={imgThree} 
+                  alt={title} 
+                  className={styles.over} 
+                  onClick={handleToggleImgFour}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -107,9 +114,3 @@ const DressCard = ({ imgOne, imgTwo, imgThree, imgFour, tagOne, title, tagTwo, i
 
 export default DressCard;
 
-
-
-// export default DressCard
-
-
-// export default DressCard

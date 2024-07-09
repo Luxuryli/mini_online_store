@@ -19,7 +19,7 @@ const Dress = () => {
         </div>
         <div className={styles.dress_card}>
             {dressData.map((item, idx) => {
-                return <DressCard imgOne={item.imgOne} imgTwo={item.imgTwo} imgThree={item.imgThree}  imgFour={item.imgFour} tagOne={item.tagOne} title={item.title} tagTwo={item.tagTwo}  imgFive={item.imgFive} imgSix={item.imgSix} imgSeven={item.imgSeven}  imgEight={item.imgEight}  tagThree={item.tagThree}
+                return <DressCard imgOne={item.imgOne} imgTwo={item.imgTwo} imgNine={item.imgNine} imgTen={item.imgTen} imgThree={item.imgThree}  imgFour={item.imgFour} tagOne={item.tagOne} title={item.title} tagTwo={item.tagTwo}  imgFive={item.imgFive} imgSix={item.imgSix} imgSeven={item.imgSeven}  imgEight={item.imgEight}  tagThree={item.tagThree}
                 key={idx} />
             })}
         </div>

@@ -55,15 +55,14 @@ const Yourcartimgs = () => {
             <li>Transaction</li>
             <li>Date</li>
           </ul>
-        
+          <ul>
+            <li>Transaction ID</li>
+            <li>1234*****56789</li>
+          </ul>
         <ul>
             <li>Payment Method</li>
             <li>Visa *****1234</li>
           </ul>          
-          <ul>
-            <li>Payment Method</li>
-            <li>Visa *****1234</li>
-          </ul>
           <ul>
             <li>Sub-total</li>
             <li>$160</li>

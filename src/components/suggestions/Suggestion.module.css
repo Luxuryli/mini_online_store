@@ -17,8 +17,37 @@
     margin-bottom: 32px;
 }
 
-.you h4 {
+.cards h5 {
     color:  #1A1A1A;
+    font-family: 'Nunito';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+
+.cards p {
+    color: #545454;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+
+.cards h1 {
+    color: #1A1A1A;
+    font-family: 'Nunito';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.you h4 {
+    color: #1A1A1A;
     font-family: "Open Sans";
     font-size: 24px;
     font-style: normal;
@@ -39,100 +68,84 @@
     gap: 8px;
 }
 
-.card_img {
+.card_img, .card_img1, .card_img2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-}
-
-.card_img1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.card_img2 {
-    /* display: flex; */
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    position: relative; /* Ensure relative positioning for absolute children */
 }
 
 .image1, .image2, .image3 {
     display: flex;
-    justify-content: right;
+    justify-content: space-between; /* Adjust as per your layout needs */
+    align-items: flex-end; /* Align items at the bottom */
     margin-bottom: 16px;
-} 
-
-.card_img h5, .card_img1 h5, .card_img2 h5 {
-    display: flex;
-    margin: 0px 0px;
-    color: #1A1A1A;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    position: relative; /* Ensure relative positioning for absolute children */
 }
 
-.card_img2 h5 {
-    display: flex;
-    margin-top: 8px;
-    color: #1A1A1A;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.card_img h1, .card_img1 h1, .card_img2 h1 {
-    color: #1A1A1A;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 8px;
-}
-
-.card_img p, .card_img1 p, .card_img2 p {
-    margin-bottom: 8px;
-    color:  #545454;
-    font-family: Nunito;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-
-.love {
-    display: flex;
-    position: absolute;
-    align-self: flex-end;
-    justify-self: center;
-    padding: 10px;
-    z-index: 100;
-}
-
-.card1 {
+.card1, .card2, .card3 {
     width: 424px;
     height: 347px;
     position: relative;
     display: inline-block;
 }
-    
-.card1 .img_top {
+
+.card1 .img_top, .card2 .img_top, .card3 .img_top {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 99;
 }
-    
-.card1:hover .img_top {
+
+.card1:hover .img_top, .card2:hover .img_top, .card3:hover .img_top {
     display: inline;
-} 
+}
+
+.loveact {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.carthet {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.love {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.over {
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.over1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dress_card2 img {
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+    gap: 8px;
+}

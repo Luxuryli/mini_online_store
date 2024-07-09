@@ -6,8 +6,6 @@ const Successful = () => {
   return (
     <>
         <Header/>
-        {/* <Card/>
-        <Suggestion/> */}
         <Success/>
         <Footer/>
     </>

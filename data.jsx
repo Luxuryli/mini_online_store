@@ -33,6 +33,8 @@ import Lemon from './src/assets/Lemon.svg'
 import Brown from './src/assets/Brown.svg' 
 import ArmyGreen from './src/assets/Army.svg' 
 import Love from './src/assets/LoveFave.svg'
+import Carthe from './src/assets/Carthe.svg'
+import Cartheh from './src/assets/Cartheh.svg'
 import LoveFill from './src/assets/LoveFaveactive.svg'
 
 
@@ -40,6 +42,8 @@ export const dressData = [
     {
        imgOne: Frame3,
        imgTwo: Frame4,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        title:  'Gloria Zeni Sleeveless',
@@ -53,6 +57,8 @@ export const dressData = [
     {
        imgOne: Frame1,
        imgTwo: Frame2,
+      imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        title:  'Corporate Sleeveless Dress',
@@ -66,6 +72,8 @@ export const dressData = [
     {
        imgOne: Frame5,
        imgTwo: Frame6,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        tagOne: 'Limited',
@@ -81,6 +89,8 @@ export const dressData = [
    {
        imgOne: Frame7,
        imgTwo: Frame8,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        tagOne: 'Limited',
@@ -95,6 +105,8 @@ export const dressData = [
    {
        imgOne: Frame16,
        imgTwo: Frame17,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        tagOne: 'Limited',
@@ -110,6 +122,8 @@ export const dressData = [
    {
        imgOne: Frame10,
        imgTwo: Frame11,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        tagOne: 'Limited',
@@ -124,6 +138,8 @@ export const dressData = [
    {
        imgOne: Frame14,
        imgTwo: Frame15,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        tagOne: 'On Demand',
@@ -138,6 +154,8 @@ export const dressData = [
    {
        imgOne: Frame12,
        imgTwo: Frame13,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        title:  'Kim Young Sleeveless',
@@ -151,6 +169,8 @@ export const dressData = [
    {
        imgOne: Frame19,
        imgTwo: Frame18,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        title:  'Giora Signature Party Gown',
@@ -164,6 +184,8 @@ export const dressData = [
    {
        imgOne: Frame22,
        imgTwo: Frame23,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        title:  'Melbourne Classic Wear',
@@ -177,6 +199,8 @@ export const dressData = [
    {
        imgOne: Frame20,
        imgTwo: Frame21,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        tagOne: 'Trending',
@@ -191,6 +215,8 @@ export const dressData = [
    {
        imgOne: Frame24,
        imgTwo: Frame25,
+       imgNine: Carthe,
+       imgTen: Cartheh,
        imgThree: Love,
        imgFour: LoveFill,
        title:  'Giora Signature Corporate Dress',
