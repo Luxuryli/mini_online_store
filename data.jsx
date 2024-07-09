@@ -32,8 +32,8 @@ import Yellow from './src/assets/Yellow.svg'
 import Lemon from './src/assets/Lemon.svg' 
 import Brown from './src/assets/Brown.svg' 
 import ArmyGreen from './src/assets/Army.svg' 
-import Love from '../mini_online_store/src/assets/LoveFave.svg'
-import LoveFill from '../mini_online_store/src/assets/LoveFaveactive.svg'
+import Love from './src/assets/mini_online_store/src/assets/LoveFave.svg'
+import LoveFill from './src/assets/mini_online_store/src/assets/LoveFaveactive.svg'
 
 
 export const dressData = [
