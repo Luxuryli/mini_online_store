@@ -108,3 +108,16 @@
 .hov:hover .img_top1 {
     display: inline;
 }
+
+
+.dress_card2 img {
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+    gap: 8px;
+}
+
+.dress_card2 img.clicked {
+    border: 2px solid;
+    border-radius: 50px;
+    /* Change this to your desired border style */
+}

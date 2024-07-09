@@ -5,6 +5,7 @@ import ZeniH from '../../assets/Shopping2hover.svg'
 import Love from '../../assets/LoveFave.svg'
 import LoveH from '../../assets/LoveFaveactive.svg'
 import Drop from '../../components/drop_down/Drop'
+import Number from '../number-adjuster/NumberAdjuster'
 import style from '../../components/my_cart/Mycart.module.css'
 
 const Mycart = () => {
@@ -36,6 +37,7 @@ const Mycart = () => {
                     <div className={style.colors}>
                         <p>Black</p>
                         <Drop/>
+                        <Number/>
                     </div>
                     <button className={style.remove}>
                         Remove
@@ -60,6 +62,7 @@ const Mycart = () => {
                     <div className={style.colors}>
                         <p>Black</p>
                         <Drop/>
+                        <Number/>
                     </div>
                     <button className={style.remove}>
                         Remove
