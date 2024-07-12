@@ -128,6 +128,210 @@ input[type=text] {
     height: 24px;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.mobileMenu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 360px;
+    height: 932px;
+    background-color: white;
+    z-index: 100;
+
+}
+
+.m {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 32px;
+}
+
+
+
+.mobileMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+}
+
+.mobileMenu ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobileMenu ul li a {
+    text-decoration: none;
+    color: rgba(12, 49, 48, 1);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Nunito';
+}
+
+.mobileMenu ul li.menuItem a {
+    font-size: 16px;
+}
+
+.arrowright {
+    margin-left: auto;
+}
+
+
+
+@media (max-width: 576px) {
+    header {
+    background-color: rgba(231, 236, 236, 1);
+    height: 195px;
+    display: flex;
+    padding: 20px;
+}
+
+
+.header_wrp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100vw;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    width: 10%;
+}
+
+.section {
+    display: none;
+    width:20%;
+}
+
+.section ul {
+    display: flex;
+    width: 20%;
+    gap: 62px;
+}
+
+li {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 27.28px;
+    color: rgba(12, 49, 48, 1);
+}
+
+.section ul li:hover {
+    border-bottom: solid 3px rgba(12, 49, 48, 1);
+    font-weight: 700;
+    line-height: 27.28px;
+    color: rgba(12, 49, 48, 1);
+}
+
+.search {
+    display: flex;
+    width: 10%;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 12px;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 50px;
+    width: 213px;
+    height: 40px;
+    padding: 8px;
+}
+
+input {
+    border: none;
+    background-color: rgba(217, 217, 217, 1);
+    color: rgba(12, 49, 48, 1);
+}
+
+input::placeholder {
+    color: rgba(12, 49, 48, 1);
+    font-family: 'Nunito Sans';
+    font-size: 16px;
+    align-self: center;
+    justify-self: left;
+    display: flex;
+    font-weight: 400;
+    line-height: 21.82px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=text] {
+    font-size: 16px;
+}
+
+.lil {
+    text-decoration: none;
+}
+
+.usermenu {
+    display: none;
+    align-items: center;
+    gap: 18px;
+    width: 5%;
+}
+
+.fav {
+    display: flex;
+    width: 24px;
+    height: 24px;
+}
+
+
+.user {
+    display: flex;
+    width: 24px;
+    height: 24px;
+}
+
+.user:hover {
+    background-image: url(/src/assets/userh.svg);
+    transition: background-image 0.5s ease-in-out;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.cart {
+    display: flex;
+    width: 24px;
+    height: 24px;
+}
+
+.cart:hover {
+    background-image: url(/src/assets/shopping-carth.svg);
+    transition: background-image 0.5s ease-in-out;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+}
+}
+
 
 
 

@@ -53,7 +53,7 @@ const Yourcartimgs = () => {
        <div className={styles.cart_total}>
           <ul>
             <li>Transaction</li>
-            <li>Date</li>
+            <li>Thursday, 08 May, 2024</li>
           </ul>
           <ul>
             <li>Transaction ID</li>

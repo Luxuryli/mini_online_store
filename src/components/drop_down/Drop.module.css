@@ -16,3 +16,21 @@ select:focus {
     outline: none;
 }
 
+@media (max-width: 576px) {
+    select {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px;
+    border-top: 1px;
+    border-right: 1px;
+    color: #1A1A1A;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0px 8px;
+}
+
+}
+

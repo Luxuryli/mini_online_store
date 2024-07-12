@@ -83,6 +83,47 @@ const Suggestion = () => {
           </div>
         ))}
       </div>
+      <div className={Styles.cards1}>
+        {[Frame2, Frame3].map((frame, index) => (
+          <div className={Styles.card_img} key={index}>
+            <div className={Styles.image1}>
+              <div className={Styles.card1}>
+                <img src={frame} alt="Card Back" />
+                <img src={[FrameH1, FrameH2][index]} alt="Card Front" className={Styles.img_top} />
+              </div>
+              <div className={Styles.loveact}>
+                <div className={Styles.carthet} onClick={() => toggleCarthe(index)}>
+                  <img
+                    src={isCartheActive[index] ? Cartheh : Carthe}
+                    alt="title"
+                    className={Styles.over}
+                  />
+                </div>
+                <div className={Styles.love} onClick={() => toggleLoveFill(index)}>
+                  <img
+                    src={isLoveFilled[index] ? LoveFill : Love}
+                    alt="title"
+                    className={Styles.over}
+                  />
+                </div>
+              </div>
+            </div>
+            <h5>{['Okonjo Iweala Dress', 'Giora Signature Summer Dress'][index]}</h5>
+            <p>{[
+              'Women’s corporate office dress',
+              'Women’s summer dress'
+            ][index]}</p>
+            <div className={Styles.colors}>
+              {[Yellow, Violet, Ocean, Brown, Yellow, Violet, Purple, Brown]
+                .slice(index * 4, (index + 1) * 4)
+                .map((color, colorIndex) => (
+                  <img key={colorIndex} src={color} alt="color" />
+              ))}
+            </div>
+            <h1>{['$60', '$120'][index]}</h1>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

@@ -12,10 +12,16 @@ const Mycart = () => {
   return (
     <section className={style.mycart}>
         <div className={style.cartwrp}>
+            <div className="top">
+
             <h5>My Cart</h5>
             <p>Subtotal $160</p>
+            </div>
+            <div className="bottom">
+
             <h4>Shopping Bag</h4>
             <h6>2 items</h6>
+            </div>
         </div>
         <div className={style.shopwrp}>
             <div className={style.queen}>
@@ -31,9 +37,9 @@ const Mycart = () => {
                     </div>
                 </div>
                 <div className={style.giora}>
-                    <h5>Giora Signature Summer Dress</h5>
+                    <h5>Giora Queen Gown</h5>
                     <h4>TRENDING</h4>
-                    <h5>$120</h5>
+                    <h5>$70</h5>
                     <div className={style.colors}>
                         <p>Black</p>
                         <Drop/>
@@ -56,9 +62,8 @@ const Mycart = () => {
                     </div>
                 </div>
                 <div className={style.giora}>
-                    <h5>Giora Signature Summer Dress</h5>
-                    <h4>TRENDING</h4>
-                    <h5>$120</h5>
+                    <h5>Giora Zeni Sleeveless</h5>
+                    <h5>$70</h5>
                     <div className={style.colors}>
                         <p>Black</p>
                         <Drop/>

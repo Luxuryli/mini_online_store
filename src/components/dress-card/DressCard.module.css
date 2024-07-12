@@ -1,121 +1,170 @@
 .mother {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .dress_card1 h3 {
-    color: #1A1A1A;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 8px;
+  color: #1A1A1A;
+  font-family: 'Nunito';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 8px;
 }
 
 .dress_card1 p {
-    color: #545454;
-    font-family: Nunito;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #545454;
+  font-family: 'Nunito';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .dress_card1 h4 {
-    color: #502F14;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 16px;
+  color: #502F14;
+  font-family: 'Nunito';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 16px;
 }
 
 .dress_card3 p {
-    color: #1A1A1A;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #1A1A1A;
+  font-family: 'Nunito';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .dress_card0 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: left;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: left;
 }
 
 .dress_card2 {
-    margin: 8px 0px;
-    display: flex;
-    gap: 8px;
+  margin: 8px 0px;
+  display: flex;
+  gap: 8px;
 }
 
 .lovehov {
-    position: relative;
-    width: 346px;
-    height: 347px;
+  position: relative;
+  width: 346px;
+  height: 347px;
 }
 
 .hov {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: inline-block;
 }
 
 .hov .img_top1 {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .hov:hover .img_top1 {
-    display: inline;
+  display: inline;
 }
 
 .loveact {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 100;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 100;
 }
 
 .carthet {
-    position: relative;
+  position: relative;
 }
 
 .over {
-    cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .over1 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .dress_card2 img {
-    cursor: pointer;
-    transition: border 0.3s ease-in-out;
-    gap: 8px;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+  gap: 8px;
 }
 
 .dress_card2 img.clicked {
-    border: 2px solid;
-    border-radius: 50px;
-    /* Change this to your desired border style */
+  border: 2px solid;
+  border-radius: 50px;
+}
+
+
+
+
+
+
+@media (max-width: 576px) {
+  .mother {
+    align-items: flex-start;
+  }
+
+  .dress_card1 h3 {
+    font-size: 16px;
+  }
+
+  .dress_card1 p {
+    font-size: 12px;
+  }
+
+  .dress_card1 h4 {
+    font-size: 16px;
+    color: #1A1A1A;
+  }
+
+  .dress_card3 p {
+    font-size: 16px;
+  }
+
+  .lovehov {
+    width:auto ;
+    height:auto ;
+  }
+
+  .hov img {
+    width: 185px;
+    height: 185px;
+    border-radius: 10px;
+  }
+
+  .loveact {
+    justify-content: flex-start;
+    gap: 105px;
+    padding: 5px 10px;
+  }
+
+  .carthet img {
+    width: 24px;
+    height: 24px;
+  }
 }

@@ -12,7 +12,10 @@ body {
   background-color: rgba(254, 254, 254, 1);
   font-family: 'Nunito';
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
+
+
+
+

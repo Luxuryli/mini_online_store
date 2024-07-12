@@ -41,6 +41,7 @@ const Yourcartimg = () => {
                             <li>Qty:1</li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div> 

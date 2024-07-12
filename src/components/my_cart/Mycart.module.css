@@ -170,3 +170,195 @@
     margin-bottom: 16px;
     margin-top: 0px;
 }
+
+
+
+@media (max-width: 576px) {
+    .mycart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 190px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cartwrp {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-self: center;
+    justify-content: space-between;
+    padding: 0px 10px 10px 0px;
+}
+
+.cartwrp h5 {
+    color:  #1A1A1A;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+
+.cartwrp p {
+    color:  #1A1A1A;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+.cartwrp h4 {
+    color:  #1A1A1A;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+
+.cartwrp h6 {
+    color:  #1A1A1A;
+    font-family: "Nunito Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 40px;
+}
+
+.hov {
+    position: relative;
+    display: inline-block;
+}
+
+.hov img {
+    display: flex;
+    width: 185px;
+    height: 185px;
+}
+
+.hov .img_top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.hov:hover .img_top {
+    display: inline;
+}
+
+.lovehov {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+
+.loveact {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    justify-self: center;
+    z-index: 100;
+    margin: -5px;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.over {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    justify-self: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+.over1 {
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    justify-self: center;
+    padding: 20px;
+    z-index: 99;
+}
+
+.card_img2, .card_img3 {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: left;
+    border-bottom: solid 1px #B5B5B5;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    padding-right: 20px;
+}
+
+
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.remove {
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid #A20E0E;
+    color: #A20E0E;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 91px;
+    height: 40px;
+    background-color: transparent;
+}
+
+.giora h5 {
+    color: #1A1A1A;
+    font-family: 'Nunito';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+
+.giora h4 {
+    color: #6B3E1A;
+    font-family: Nunito;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+}

@@ -37,7 +37,7 @@ const Cart_Summary = () => {
        <div className={styles.checkbtn}>
         <Link style={{textDecoration:'None'}} to='/checkout'>
            <button className={styles.check}>
-              Checkout
+              Check Out
            </button>
         </Link>
           <button className={styles.pal}>

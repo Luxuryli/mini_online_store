@@ -93,7 +93,7 @@ const Form = () => {
             </div>
         </div>
         </div>
-        <hr />
+        <hr/>
         <Link style={{textDecoration: 'none'}} to='/Successful'>
         <button className={Style.buynow}>
             Buy Now
@@ -102,6 +102,7 @@ const Form = () => {
         </div>
         <div className={Style.form2}>
             <Cards/>
+            <hr  className={Style.line}/>
         </div>
         </div>
     </section>

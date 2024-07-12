@@ -39,18 +39,9 @@ const DressCard = ({ imgOne, imgTwo, imgThree, imgNine, imgTen, imgFour, tagOne,
           <div className={styles.loveact}>
             <div className={styles.carthet}>
               {showImgTen ? (
-                <img 
-                  src={imgTen} 
-                  alt={title} 
-                  className={styles.over} 
-                  onClick={handleToggleImgTen}
-                />
+                <img src={imgTen} alt={title} className={styles.over} onClick={handleToggleImgTen} />
               ) : (
-                <img 
-                  src={imgNine} 
-                  alt={title} 
-                  className={styles.over} 
-                  onClick={handleToggleImgTen}
+                <img src={imgNine} alt={title} className={styles.over} onClick={handleToggleImgTen}
                 />
               )}
             </div>

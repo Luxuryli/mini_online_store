@@ -3,7 +3,7 @@ import style from '../number-adjuster/NumberAdjuster.module.css'
 
 const NumberAdjuster = () => {
   // Initialize state to hold the current number, starting at 0
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState(1);
 
   // Function to handle increasing the number
   const increaseNumber = () => {
@@ -20,6 +20,7 @@ const NumberAdjuster = () => {
   return (
     <div className={style.box}>
       <div className={style.btnn}>
+        <p>Qty</p>
         <button onClick={decreaseNumber} >-</button>
          <div className={style.num}>{number}</div>
         <button onClick={increaseNumber}>+</button>
