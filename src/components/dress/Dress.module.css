@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start; 
   padding: 0px 0px 115px 32px;
 }
 
@@ -19,8 +19,8 @@
 
 .dress_card {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
   row-gap: 67px;
 }
 

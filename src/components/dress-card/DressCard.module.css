@@ -69,6 +69,11 @@
   display: inline-block;
 }
 
+.hov img {
+  display: flex;
+  border-radius: 10px;
+}
+
 .hov .img_top1 {
   display: none;
   position: absolute;
@@ -87,7 +92,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 8px;
   box-sizing: border-box;
   z-index: 100;
 }
@@ -159,8 +164,14 @@
 
   .loveact {
     justify-content: flex-start;
-    gap: 105px;
-    padding: 5px 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    z-index: 100;
   }
 
   .carthet img {
