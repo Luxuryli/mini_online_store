@@ -65,7 +65,7 @@ li {
 
 input {
     border: none;
-    background-color: rgba(217, 217, 217, 1);
+    background-color: transparent;
     color: rgba(12, 49, 48, 1);
 }
 
@@ -148,7 +148,6 @@ input[type=text] {
     right: 0px;
     width: 360px;
     height: 100vh;
-    /* Changed to full viewport height */
     background-color: white;
     z-index: 100;
 }

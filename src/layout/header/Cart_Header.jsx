@@ -4,7 +4,7 @@ import logo from '../../assets/Giora.svg';
 import search from '../../assets/search-normal.svg';
 import favorite from '../../assets/favorite.svg';
 import user from '../../assets/user.svg';
-import cart from '../../assets/shopping-cart.svg';
+import cart from '../../assets/shopping-carth.svg';
 import hamburger from '../../assets/hamburger.svg';
 import close from '../../assets/hamburger.svg';
 import arrowright from '../../assets/Arrow_right.svg';
@@ -121,6 +121,7 @@ const Header = () => {
         <div className={classes.catee}>
           <Cate />
         </div>
+
       </nav>
     </header>
   );
