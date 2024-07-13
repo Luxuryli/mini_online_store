@@ -1,8 +1,14 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
+import { useCart } from '../../contexts/CartContext';
+import useStore from '../../components/stores/Store';
 import styles from './DressCard.module.css';
 
-const DressCard = ({ imgOne, imgTwo, imgThree, imgNine, imgTen, imgFour, tagOne, title, tagTwo, imgFive, imgSix, imgSeven, imgEight, tagThree }) => {
+const DressCard = ({
+  imgOne, imgTwo, imgThree, imgNine, imgTen, imgFour, tagOne, title, tagTwo,
+  imgFive, imgSix, imgSeven, imgEight, tagThree
+}) => {
   const [clickedImages, setClickedImages] = useState({
     imgFive: false,
     imgSix: false,
@@ -12,6 +18,7 @@ const DressCard = ({ imgOne, imgTwo, imgThree, imgNine, imgTen, imgFour, tagOne,
 
   const [showImgTen, setShowImgTen] = useState(false);
   const [showImgFour, setShowImgFour] = useState(false);
+  const { cartItems, addToCart, removeFromCart } = useStore();
 
   const handleImageClick = (image) => {
     setClickedImages((prevState) => ({
@@ -21,6 +28,21 @@ const DressCard = ({ imgOne, imgTwo, imgThree, imgNine, imgTen, imgFour, tagOne,
   };
 
   const handleToggleImgTen = () => {
+    const item = {
+      id: title,
+      name: title,
+      tag: tagOne,
+      tagThree: tagThree, 
+      color: 'Black', 
+      img: imgOne,
+      imgHover: imgTwo,
+    };
+
+    if (cartItems.some(cartItem => cartItem.id === item.id)) {
+      removeFromCart(item);
+    } else {
+      addToCart(item);
+    }
     setShowImgTen((prevShowImgTen) => !prevShowImgTen);
   };
 
@@ -41,25 +63,14 @@ const DressCard = ({ imgOne, imgTwo, imgThree, imgNine, imgTen, imgFour, tagOne,
               {showImgTen ? (
                 <img src={imgTen} alt={title} className={styles.over} onClick={handleToggleImgTen} />
               ) : (
-                <img src={imgNine} alt={title} className={styles.over} onClick={handleToggleImgTen}
-                />
+                <img src={imgNine} alt={title} className={styles.over} onClick={handleToggleImgTen} />
               )}
             </div>
             <div className={styles.carthet}>
               {showImgFour ? (
-                <img 
-                  src={imgFour} 
-                  alt={title} 
-                  className={styles.over} 
-                  onClick={handleToggleImgFour}
-                />
+                <img src={imgFour} alt={title} className={styles.over} onClick={handleToggleImgFour} />
               ) : (
-                <img 
-                  src={imgThree} 
-                  alt={title} 
-                  className={styles.over} 
-                  onClick={handleToggleImgFour}
-                />
+                <img src={imgThree} alt={title} className={styles.over} onClick={handleToggleImgFour} />
               )}
             </div>
           </div>
@@ -96,12 +107,11 @@ const DressCard = ({ imgOne, imgTwo, imgThree, imgNine, imgTen, imgFour, tagOne,
           onClick={() => handleImageClick('imgEight')}
         />
       </div>
-      <div className={styles.dress_card3}>
-        <p>{tagThree}</p>
+      <div className="dress_card3">
+        <h3>${tagThree}</h3>
       </div>
     </div>
   );
 };
 
 export default DressCard;
-

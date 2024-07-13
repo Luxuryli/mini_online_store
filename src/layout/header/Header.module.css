@@ -1,4 +1,4 @@
-header {
+.header {
     background-color: rgba(231, 236, 236, 1);
     height: 123px;
     display: flex;
@@ -121,20 +121,40 @@ input[type=text] {
     height: 24px;
 }
 
+.cartLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(12, 49, 48, 1);
+}
+
 .cart {
     display: flex;
+    position: relative;
     width: 24px;
     height: 24px;
 }
 
-.cart:hover {
-    background-image: url(/src/assets/shopping-carth.svg);
-    transition: background-image 0.5s ease-in-out;
+.cartImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.cartItemCount {
+    position: absolute;
+    top: 43px;
+    right: 265px;
+    background-color: rgba(12, 49, 48, 1);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
     display: flex;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
+    align-items: center;
+    justify-content: center;
 }
 
 .hamburger {
@@ -157,7 +177,6 @@ input[type=text] {
     position: absolute;
     right: 0;
     padding-right: 20px;
-
 }
 
 .m {
@@ -214,8 +233,55 @@ input[type=text] {
     z-index: 99;
 }
 
+.notificationAdd,
+.notificationRemove {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #1A1A1A;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.notificationAdd {
+    background-color: #4CAF50;
+    /* Green */
+}
+
+.notificationRemove {
+    background-color: #F44336;
+    /* Red */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
 @media (max-width: 576px) {
-    header {
+    .header {
         background-color: rgba(231, 236, 236, 1);
         height: 195px;
         display: flex;
@@ -225,7 +291,7 @@ input[type=text] {
         width: 100%;
     }
 
-    nav {
+    .nav {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -274,6 +340,10 @@ input[type=text] {
         margin-left: auto;
     }
 
+    .cartItemCount {
+        top: -10px;
+        right: -10px;
+    }
 
     .catee {
         margin: 24px;

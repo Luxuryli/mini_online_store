@@ -52,7 +52,7 @@ export const dressData = [
        imgSix: Violet,
        imgSeven: Purple,
        imgEight: Green,
-       tagThree: '$90',
+       tagThree: 90,
     },
     {
        imgOne: Frame1,
@@ -67,7 +67,7 @@ export const dressData = [
        imgSix: Violet,
        imgSeven: OceanGreen,
        imgEight: Brown,
-       tagThree: '$45',
+       tagThree: 45,
     },    
     {
        imgOne: Frame5,
@@ -83,7 +83,7 @@ export const dressData = [
        imgSix: Violet,
        imgSeven: Purple,
        imgEight: Blue,
-       tagThree: '$63',
+       tagThree: 63,
     },    
 
    {
@@ -100,7 +100,7 @@ export const dressData = [
        imgSix: Red,
        imgSeven: Lemon,
        imgEight: Green,
-       tagThree: '$50',
+       tagThree: 50,
     },
    {
        imgOne: Frame16,
@@ -116,7 +116,7 @@ export const dressData = [
        imgSix: Violet,
        imgSeven: OceanGreen,
        imgEight: Brown,
-       tagThree: '$60',
+       tagThree: 60,
     },
 
    {
@@ -133,7 +133,7 @@ export const dressData = [
        imgSix: Violet,
        imgSeven: Purple,
        imgEight: Brown,
-       tagThree: '$120',
+       tagThree: 120,
     },   
    {
        imgOne: Frame14,
@@ -149,7 +149,7 @@ export const dressData = [
        imgSix: Violet,
        imgSeven: Purple,
        imgEight: Blue,
-       tagThree: '$63',
+       tagThree: 63,
     },  
    {
        imgOne: Frame12,
@@ -164,7 +164,7 @@ export const dressData = [
        imgSix: Red,
        imgSeven: Lemon,
        imgEight: Green,
-       tagThree: '$125',
+       tagThree: 125,
     },    
    {
        imgOne: Frame19,
@@ -179,7 +179,7 @@ export const dressData = [
        imgSix: Red,
        imgSeven: Violet,
        imgEight: Brown,
-       tagThree: '$50',
+       tagThree: 50,
     },
    {
        imgOne: Frame22,
@@ -194,7 +194,7 @@ export const dressData = [
        imgSix: Red,
        imgSeven: Lemon,
        imgEight: Green,
-       tagThree: '$50',
+       tagThree: 50,
     },
    {
        imgOne: Frame20,
@@ -210,7 +210,7 @@ export const dressData = [
        imgSix: Violet,
        imgSeven: Purple,
        imgEight: Blue,
-       tagThree: '$70',
+       tagThree: 70,
     },
    {
        imgOne: Frame24,
@@ -225,6 +225,6 @@ export const dressData = [
        imgSix: Violet,
        imgSeven: Purple,
        imgEight: Brown,
-       tagThree: '$80',
+       tagThree: 80,
     },
 ]
