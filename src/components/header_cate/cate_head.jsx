@@ -14,6 +14,7 @@ const CateHead = () => {
 
   return (
     <section className={style.cate}>
+        <Link to='/'className={style.homepage}>
       <div className={style.homepage}>
         <img src={Home} alt="home" />
         <p>Home Page</p>
