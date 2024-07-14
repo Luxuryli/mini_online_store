@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Arrow_right from '../../assets/Arrow_right.svg';
 import Home from '../../assets/home.svg';
 import Sort_arrow from '../../assets/Arrow_down.svg';
@@ -15,12 +16,13 @@ const CateHead = () => {
   return (
     <section className={style.cate}>
         <Link to='/'className={style.homepage}>
-      <div className={style.homepage}>
+        <div className={style.homepage}>
         <img src={Home} alt="home" />
         <p>Home Page</p>
         <img src={Arrow_right} alt="right" />
         <p>Women</p>
       </div>
+        </Link>
       <div className={style.dress_content}>
         <ul>
           <li><b>Women Dresses</b></li>

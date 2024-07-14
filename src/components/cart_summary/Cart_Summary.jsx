@@ -9,12 +9,15 @@ import styles from '../cart_summary/Cart_Summary.module.css';
 import useStore from '../stores/Store'; // Assuming this is where your Zustand store is imported from
 
 const Cart_Summary = () => {
-  const { subtotal } = useStore((state) => ({
+  const { subtotal, cartItems } = useStore((state) => ({
     subtotal: state.subtotal,
+    cartItems: state.cartItems,
   }));
 
   // Calculate total based on subtotal and any additional costs (if applicable)
   const total = subtotal; // Assuming no additional costs for simplicity
+
+  const isCartEmpty = cartItems.length === 0;
 
   return (
     <section className={styles.cart_sum}>
@@ -40,23 +43,27 @@ const Cart_Summary = () => {
         </ul>
       </div>
       <div className={styles.checkbtn}>
-        <Link style={{ textDecoration: 'None' }} to='/checkout'>
-          <button className={styles.check}>
-            Check Out
+        {!isCartEmpty && (
+          <Link style={{ textDecoration: 'none' }} to='/checkout'>
+            <button className={styles.check}>
+              Check Out
+            </button>
+          </Link>
+        )}
+        {!isCartEmpty && (
+          <button className={styles.pal}>
+            <img src={Paypal} alt="PayPal" />
           </button>
-        </Link>
-        <button className={styles.pal}>
-          <img src={Paypal} alt="pal" />
-        </button>
+        )}
       </div>
       <div className={styles.secure}>
         <p>Secure Payments:</p>
         <div className={styles.secure_cards}>
-          <img src={Visa} alt="Apple" />
-          <img src={Master} alt="Master" />
+          <img src={Visa} alt="Visa" />
+          <img src={Master} alt="Mastercard" />
           <img src={Amex} alt="Amex" />
-          <img src={Gpay} alt="Gpay" />
-          <img src={ApplePay} alt="ApplePay" />
+          <img src={Gpay} alt="Google Pay" />
+          <img src={ApplePay} alt="Apple Pay" />
         </div>
       </div>
     </section>

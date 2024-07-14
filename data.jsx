@@ -63,7 +63,7 @@ export const dressData = [
        imgFour: LoveFill,
        title:  'Corporate Sleeveless Dress',
        tagTwo: "Women’s corporate office dress",
-       imgFive: Yellow ,
+       imgFive: Yellow,
        imgSix: Violet,
        imgSeven: OceanGreen,
        imgEight: Brown,

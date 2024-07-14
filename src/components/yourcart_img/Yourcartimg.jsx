@@ -26,7 +26,7 @@ const Yourcartimg = () => {
               <div className={styles.colors}>
                 <ul>
                   <li>{item.color}</li>
-                  <li className={styles.bod}>Size: {item.size}</li>
+                  <li className={styles.bod}>{item.size}</li>
                   <li>Qty: {item.quantity}</li>
                 </ul>
               </div>

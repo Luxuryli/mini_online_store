@@ -3,14 +3,14 @@ import Drop from '../../components/drop_down/Drop';
 import love from '../../assets/LoveFave.svg';
 import loveh from '../../assets/LoveFaveactive.svg';
 import NumberAdjuster from '../number-adjuster/NumberAdjuster';
-import useStore from '../stores/Store'; 
+import useStore from '../stores/Store';
 import style from '../../components/my_cart/Mycart.module.css';
 
 const Mycart = () => {
   const { cartItems, subtotal, removeFromCart, adjustQuantity } = useStore((state) => ({
     cartItems: state.cartItems.map(item => ({
       ...item,
-      size: state.selectedSizes[item.id] || 'UK 12', // Default to UK 12 if size not selected
+      size: state.selectedSizes[item.id] || 'UK 12',
     })),
     subtotal: state.subtotal,
     removeFromCart: state.removeFromCart,
@@ -23,7 +23,7 @@ const Mycart = () => {
       <div className={style.cartwrp}>
         <div className="top">
           <h5>My Cart</h5>
-          <p>Subtotal ${subtotal.toFixed(2)}</p> 
+          <p>Subtotal ${subtotal.toFixed(2)}</p>
         </div>
         <div className="bottom">
           <h4>Shopping Bag</h4>
@@ -32,7 +32,7 @@ const Mycart = () => {
       </div>
       <div className={style.shopwrp}>
         {cartItems.map((item) => (
-          <div key={item.id} className={style.card_img}>
+          <div key={item.uniqueId} className={style.card_img}>
             <div className={style.lovehov}>
               <div className={style.hov}>
                 <img src={item.img} alt="Card Back" />
@@ -50,7 +50,7 @@ const Mycart = () => {
               <div className={style.colors}>
                 <p>{item.color}</p>
                 <Drop itemId={item.id} selectedSize={item.size} />
-                <NumberAdjuster itemId={item.id} initialQuantity={item.quantity} adjustQuantity={adjustQuantity} />
+                <NumberAdjuster itemId={item.uniqueId} initialQuantity={item.quantity} adjustQuantity={adjustQuantity} />
               </div>
               <button className={style.remove} onClick={() => removeFromCart(item)}>
                 Remove

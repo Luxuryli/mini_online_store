@@ -8,34 +8,35 @@ const useStore = create((set) => ({
 
   addToCart: (item) =>
     set((state) => {
-      const updatedCart = [...state.cartItems, { ...item, id: uuidv4(), quantity: 1 }];
+      const updatedCart = [...state.cartItems, { ...item, uniqueId: uuidv4(), quantity: 1 }];
+      const newSubtotal = state.subtotal + item.tagThree;
       localStorage.setItem('cartItems', JSON.stringify(updatedCart));
-      localStorage.setItem('subtotal', state.subtotal + item.tagThree);
+      localStorage.setItem('subtotal', newSubtotal);
       return {
         cartItems: updatedCart,
-        subtotal: state.subtotal + item.tagThree,
+        subtotal: newSubtotal,
       };
     }),
 
   removeFromCart: (item) =>
     set((state) => {
-      const updatedCart = state.cartItems.filter((cartItem) => cartItem.id !== item.id);
+      const updatedCart = state.cartItems.filter((cartItem) => cartItem.uniqueId !== item.uniqueId);
+      const newSubtotal = state.subtotal - (item.tagThree * item.quantity);
       localStorage.setItem('cartItems', JSON.stringify(updatedCart));
-      localStorage.setItem('subtotal', state.subtotal - item.tagThree);
+      localStorage.setItem('subtotal', newSubtotal);
       return {
         cartItems: updatedCart,
-        subtotal: state.subtotal - item.tagThree,
+        subtotal: newSubtotal,
       };
     }),
 
-  adjustQuantity: (id, newQuantity) =>
+  adjustQuantity: (uniqueId, newQuantity) =>
     set((state) => {
       const updatedCart = state.cartItems.map((item) =>
-        item.id === id ? { ...item, quantity: newQuantity } : item
+        item.uniqueId === uniqueId ? { ...item, quantity: newQuantity } : item
       );
-      localStorage.setItem('cartItems', JSON.stringify(updatedCart));
-
       const updatedSubtotal = updatedCart.reduce((total, item) => total + item.tagThree * item.quantity, 0);
+      localStorage.setItem('cartItems', JSON.stringify(updatedCart));
       localStorage.setItem('subtotal', updatedSubtotal);
 
       return {

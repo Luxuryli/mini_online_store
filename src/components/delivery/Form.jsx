@@ -36,7 +36,7 @@ const Form = () => {
                     Delivery Address
                 </p>
                 <div className={Style.names}>
-                    <input type="text" placeholder='First Name'/>
+                    <input type="text" placeholder='First Name' />
                     <input type="text" placeholder='Last Name'/>
                 </div>
                 <div className={Style.names}>

@@ -1,11 +1,15 @@
-import Queen from '../../assets/Shopping1.svg'
 import Circle from '../../assets/tick-circle.svg'
-import QueenH from '../../assets/Shopping1hover.svg'
-import Zeni from '../../assets/Shopping2.svg'
-import ZeniH from '../../assets/Shopping2hover.svg'
+import useStore from '../stores/Store'; 
 import styles from '../yourcart_img/Yourcartimgs.module.css'
 
 const Yourcartimgs = () => {
+  const { cartItems, subtotal } = useStore((state) => ({
+    cartItems: state.cartItems.map(item => ({
+      ...item,
+      size: state.selectedSizes[item.id] || 'UK 12', 
+    })),
+        subtotal: state.subtotal,
+  }));
   return (
     <section className={styles.success}>
         <div className={styles.successs}>
@@ -16,43 +20,29 @@ const Yourcartimgs = () => {
         </div>
         <div className={styles.yourcart}>
 
-        <div className={styles.shopwrp}>
-            <div className={styles.card_img2}>
-                    <div className={styles.hov}>
-                        <img src={Queen} alt="Card Back"/>
-                        <img src={QueenH} alt="Card Front"  className={styles.img_top}/>
-                    </div>
-                <div className={styles.giora}>
-                    <h5>Giora Queen Gown</h5>
-                    <div className={styles.colors}>
-                        <ul>
-                            <li>Black</li>
-                            <li className={styles.bod}>UK12</li>
-                            <li>Qty:1</li>
-                        </ul>
-                    </div>
-                </div>
+      <div className={styles.shopwrp}>
+        {cartItems.map((item) => (
+          <div key={item.id} className={styles.card_img}>
+            <div className={styles.hov}>
+              <img src={item.img} alt="Card Back" />
+              <img src={item.imgHover} alt="Card Front" className={styles.img_top} />
             </div>
-            <div className={styles.card_img3}>
-                    <div className={styles.hov}>
-                        <img src={Zeni} alt="Card Back"/>
-                        <img src={ZeniH} alt="Card Front"  className={styles.img_top}/>
-                    </div>
-                <div className={styles.giora}>
-                    <h5>Giora Zeni Sleeveless</h5>
-                    <div className={styles.colors}>
-                        <ul>
-                            <li>Black</li>
-                            <li className={styles.bod}>UK12</li>
-                            <li>Qty:1</li>
-                        </ul>
-                    </div>
-                </div>
+            <div className={styles.giora}>
+              <h5>{item.name}</h5>
+              <div className={styles.colors}>
+                <ul>
+                  <li>{item.color}</li>
+                  <li className={styles.bod}>{item.size}</li>
+                  <li>Qty: {item.quantity}</li>
+                </ul>
+              </div>
             </div>
-        </div> 
+          </div>
+        ))}
+      </div> 
        <div className={styles.cart_total}>
           <ul>
-            <li>Transaction</li>
+            <li>Transaction Date</li>
             <li>Thursday, 08 May, 2024</li>
           </ul>
           <ul>
@@ -65,7 +55,7 @@ const Yourcartimgs = () => {
           </ul>          
           <ul>
             <li>Sub-total</li>
-            <li>$160</li>
+            <li>${subtotal.toFixed(2)}</li>
           </ul>
           <ul>
             <li>Shipping</li>
@@ -76,7 +66,7 @@ const Yourcartimgs = () => {
        <div className={styles.checkbtn}>
           <ul>
             <li><b>Total</b></li>
-            <li><b>$160</b></li>
+            <li>${subtotal.toFixed(2)}</li>
           </ul>
            <button className={styles.check}>
               Print Receipt

@@ -139,13 +139,11 @@
 }
 
 .notificationAdd {
-  background-color: #4CAF50;
-  /* Green */
+  background-color: #1A1A1A;
 }
 
 .notificationRemove {
   background-color: #F44336;
-  /* Red */
 }
 
 @keyframes fadein {
@@ -221,4 +219,49 @@
     width: 24px;
     height: 24px;
   }
+
+    .notificationAdd,
+    .notificationRemove {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: #1A1A1A;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+  
+    .notificationAdd {
+      background-color: #1A1A1A;
+    }
+  
+    .notificationRemove {
+      background-color: #F44336;
+    }
+  
+    @keyframes fadein {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+  
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @keyframes fadeout {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      to {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    }
 }

@@ -43,6 +43,11 @@
   padding: 10px;
 }
 
+.homepage {
+  display: flex;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
 
 
 .overlay {

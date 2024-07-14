@@ -1,7 +1,7 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { useCart } from '../../contexts/CartContext';
 import useStore from '../../components/stores/Store';
 import styles from './DressCard.module.css';
 
@@ -18,6 +18,8 @@ const DressCard = ({
 
   const [showImgTen, setShowImgTen] = useState(false);
   const [showImgFour, setShowImgFour] = useState(false);
+  const [showAddNotification, setShowAddNotification] = useState(false);
+  const [showRemoveNotification, setShowRemoveNotification] = useState(false);
   const { cartItems, addToCart, removeFromCart } = useStore();
 
   const handleImageClick = (image) => {
@@ -27,23 +29,34 @@ const DressCard = ({
     }));
   };
 
-  const handleToggleImgTen = () => {
+  const handleAddToCart = () => {
     const item = {
       id: title,
       name: title,
       tag: tagOne,
-      tagThree: tagThree, 
-      color: 'Black', 
+      tagThree: tagThree,
+      color: 'Black',
       img: imgOne,
       imgHover: imgTwo,
     };
+    addToCart(item);
+    setShowAddNotification(true);
+    setTimeout(() => {
+      setShowAddNotification(false);
+    }, 3000);
+    setShowImgTen(true);
+  };
 
-    if (cartItems.some(cartItem => cartItem.id === item.id)) {
-      removeFromCart(item);
-    } else {
-      addToCart(item);
+  const handleRemoveFromCart = () => {
+    const itemInCart = cartItems.find(cartItem => cartItem.id === title);
+    if (itemInCart) {
+      removeFromCart(itemInCart);
+      setShowRemoveNotification(true);
+      setTimeout(() => {
+        setShowRemoveNotification(false);
+      }, 3000);
+      setShowImgTen(false);
     }
-    setShowImgTen((prevShowImgTen) => !prevShowImgTen);
   };
 
   const handleToggleImgFour = () => {
@@ -61,9 +74,9 @@ const DressCard = ({
           <div className={styles.loveact}>
             <div className={styles.carthet}>
               {showImgTen ? (
-                <img src={imgTen} alt={title} className={styles.over} onClick={handleToggleImgTen} />
+                <img src={imgTen} alt={title} className={styles.over} onClick={handleRemoveFromCart} />
               ) : (
-                <img src={imgNine} alt={title} className={styles.over} onClick={handleToggleImgTen} />
+                <img src={imgNine} alt={title} className={styles.over} onClick={handleAddToCart} />
               )}
             </div>
             <div className={styles.carthet}>
@@ -107,9 +120,11 @@ const DressCard = ({
           onClick={() => handleImageClick('imgEight')}
         />
       </div>
-      <div className="dress_card3">
+      <div className={styles.dress_card3}>
         <h3>${tagThree}</h3>
       </div>
+      {showAddNotification && <div className={styles.notificationAdd}>Item added to cart</div>}
+      {showRemoveNotification && <div className={styles.notificationRemove}>Item removed from cart</div>}
     </div>
   );
 };

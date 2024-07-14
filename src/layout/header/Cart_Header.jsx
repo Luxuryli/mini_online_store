@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import useStore from '../../components/stores/Store';
 import logo from '../../assets/Giora.svg';
 import search from '../../assets/search-normal.svg';
 import favorite from '../../assets/favorite.svg';
@@ -9,10 +10,11 @@ import hamburger from '../../assets/hamburger.svg';
 import close from '../../assets/hamburger.svg';
 import arrowright from '../../assets/Arrow_right.svg';
 import Cate from '../../components/header_cate/cate_head';
-import classes from '../header/Header.module.css';
+import classes from './Header.module.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { cartItems, showAddNotification, showRemoveNotification, hideNotifications } = useStore();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -22,19 +24,26 @@ const Header = () => {
     setMenuOpen(false);
   };
 
+  useEffect(() => {
+    if (showAddNotification || showRemoveNotification) {
+      const timer = setTimeout(() => hideNotifications(), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showAddNotification, showRemoveNotification, hideNotifications]);
+
   return (
-    <header>
-      <nav>
+    <header className={classes.header}>
+      <nav className={classes.nav}>
         <div className={classes.header_wrp}>
           <div className={classes.logo}>
-            <Link to='/'>
+            <Link to='/' aria-label="Homepage">
               <img src={logo} alt="logo" />
             </Link>
           </div>
           <div className={classes.section}>
             <ul>
               <li>Men</li>
-              <Link to='/' className={classes.lil}>
+              <Link to='/' className={classes.lil} aria-label="Women section">
                 <li>Women</li>
               </Link>
               <li>Unisex</li>
@@ -44,30 +53,34 @@ const Header = () => {
           <div className={classes.search}>
             <div className={classes.searchbar}>
               <img src={search} alt="searchicon" />
-              <input type="text" placeholder='Search' />
+              <input type="text" placeholder='Search' aria-label="Search" />
             </div>
           </div>
           <div className={classes.usermenu}>
-            <img src={favorite} alt="favorite" className={classes.fav} />
-            <img src={user} alt="user" className={classes.user} />
-            <Link to='/cart'>
-              <img src={cart} alt="cart" className={classes.cart} />
+            <img src={favorite} alt="favorite" className={classes.fav} aria-label="Favorite" />
+            <img src={user} alt="user" className={classes.user} aria-label="User account" />
+            <Link to='/cart' className={classes.cartLink}>
+              <div className={classes.cartIcon}>
+                <img src={cart} alt="cart" className={classes.cartImg} aria-label="Shopping cart" />
+                {cartItems.length > 0 && (
+                  <span className={classes.cartItemCount}>{cartItems.length}</span>
+                )}
+              </div>
             </Link>
           </div>
-          <div className={classes.hamburger} onClick={toggleMenu}>
+          <div className={classes.hamburger} onClick={toggleMenu} aria-label="Toggle menu">
             <img src={menuOpen ? close : hamburger} alt="menu" />
           </div>
         </div>
         {menuOpen && (
           <>
-            <div className={classes.overlay} onClick={closeMenu}></div>
+            <div className={classes.overlay} onClick={closeMenu} aria-label="Close menu"></div>
             <div className={classes.mobileMenu}>
               <div className="hame" onClick={toggleMenu}>
-                <img src=
-              {menuOpen ? close :hamburger} alt="ham" className={classes.ham}/>
+                <img src={menuOpen ? close : hamburger} alt="ham" className={classes.ham} />
                 <Link to='/'>
-                <img src={logo} alt="Logo" className={classes.m} />
-              </Link>
+                  <img src={logo} alt="Logo" className={classes.m} />
+                </Link>
               </div>
               <ul>
                 <li>
@@ -119,10 +132,19 @@ const Header = () => {
           </>
         )}
         <div className={classes.catee}>
-          <Cate />
+          <Cate /> 
         </div>
-
       </nav>
+      {showAddNotification && (
+        <div className={classes.notificationAdd}>
+          <p>Item added to cart!</p>
+        </div>
+      )}
+      {showRemoveNotification && (
+        <div className={classes.notificationRemove}>
+          <p>Item removed from cart!</p>
+        </div>
+      )}
     </header>
   );
 };
