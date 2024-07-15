@@ -30,6 +30,16 @@ const useStore = create((set) => ({
       };
     }),
 
+  clearCart: () =>
+    set(() => {
+      localStorage.removeItem('cartItems');
+      localStorage.removeItem('subtotal');
+      return {
+        cartItems: [],
+        subtotal: 0,
+      };
+    }),
+
   adjustQuantity: (uniqueId, newQuantity) =>
     set((state) => {
       const updatedCart = state.cartItems.map((item) =>
